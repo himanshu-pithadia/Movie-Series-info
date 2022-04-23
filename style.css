@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+
+*,
+*::after,
+*::before{
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+}
+
+/*--------------------------utilty class-----------------*/
+.container {
+    max-width: 1300px;
+    width: 90%;
+    margin: 0px auto;
+}
+
+.heading{
+  font-weight: 700;
+  font-size: 3rem;
+  border-bottom: 3px solid #263238;
+  display: inline;
+}
+
+.movie-page-container{
+  max-width: 1200px;
+  margin: 0px auto;
+  padding-bottom: 3rem;
+}
+
+.btn{
+  display: inline;
+  background-color: #f2f2f25d;
+  padding: 1rem 3rem;
+  margin: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0.5rem 0.5rem 1rem #6b7272;
+}
+
+.btn:hover{
+  background-color: #f1f1f1;
+}
+
+.btn-container{
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.btn-container h2{
+  cursor: pointer;
+}
+
+/*-----------------------navbar style-----------------*/
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #263238;
+    height: 6rem;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.nav-items{
+    margin-right: 75rem;
+    align-items: center;
+    display: flex;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #f1f1f1;
+    cursor:pointer;
+}
+
+.navbar a{
+  text-decoration: none;
+  color: #f1f1f1;
+  
+}
+
+.nav-item{
+    padding: 0 1rem;
+    list-style: none;
+}
+.logo{
+    color: aliceblue;
+    font-size: 3rem;
+    font-weight: 700;
+}
+/*----------------search style--------------------------*/
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    
+  }
+  
+  /* Style the submit button */
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #fff;
+    color: black;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+  
+  
+  /* Clear floats */
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.search{
+    margin-left: -15rem;
+}
+
+/*-----------------------slider style-----------------------*/
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    margin-top: 1rem;
+  }
+  
+.mySlides img{
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: top;
+}
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  /*-----------------------card style-----------------*/
+.popular-container{
+  /* padding: 30px 20px; */
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+  .card {
+      width: 200px;
+      height: 250px;
+      object-fit: cover;
+      margin: 0.7rem;
+  }
+
+  .card img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 5%;
+  }
+
+  .trending{
+  width: 100%;
+  /* background: #444; */
+  height: 350px;
+  
+  display: flex;
+  overflow: auto;
+  margin-bottom: 2rem;
+
+  }
+
+  /*----------------- trending tvshow style----------------*/
+  .trending-tvshow{
+    width: 100%;
+    height: 350px;
+    
+    display: flex;
+    overflow: auto;
+    margin-bottom: 2rem;
+  }
+
+  /*-----------------------------trending movie style------------------*/
+  .trending-movie{
+    width: 100%;
+    height: 350px;
+    
+    display: flex;
+    overflow: auto;
+    margin-bottom: 2rem;
+  }
+
+    /*-----------------------------trending persong style------------------*/
+    .trending-person{
+      width: 100%;
+      height: 350px;
+      /* background: #444; */
+      display: flex;
+      overflow: auto;
+      margin-bottom: 2rem;
+    }
+
+    /*---------------------------movie page design-------------------------------*/
+
+  .movieitem{
+      /* background-color: red; */
+      margin-right: 50rem;
+    }
+  .nav-item:hover{
+    border-bottom: 2px solid #f2f2f2;
+  }
+
+  .movie-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .movie-card{
+    margin-bottom: 7rem;
+  }
+  /* .movie-card{
+      width: 225px;
+      height: 250px;
+      object-fit: cover;
+      margin: 0.7rem;
+  }*/
+
+  .movie-card img{
+      width: 100%;
+      height: 250px;
+      display: block;
+      border-radius: 5%;
+  } 
+
+/*---------------------------details style---------------------------*/
+
+
+  /* background-color: rgba(52.5, 10.5, 10.5, 1); */
+  
+.header-content img{
+  width: 100%;
+  max-height: 500px;
+  display: block;
+}
+
+.header-content{
+  margin-top: 1rem;
+}
+
+.img-container{
+  position: relative;
+  z-index: 2;
+}
+
+.img-container::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(52.5, 10.5, 10.5, 1); */
+  background: rgba(31.5, 31.5, 31.5, 0.84);
+  z-index: 1;
+  opacity: 1;
+}
+
+.header-content .poster{
+  width: 250px;
+  height: 400px;
+  /* object-fit: cover; */
+  border-radius: 5%;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  opacity: 1;
+  z-index: 3;
+  transform: translate(-100%,-50%);
+}
+
+.header-content .movie-detail{
+  position: absolute;
+  top: 40%;
+  left: 55%;
+  opacity: 1;
+  z-index: 3;
+  transform: translate(-50%,-50%);
+
+}
+
+.title{
+  color: aliceblue;
+  font-weight: 500;
+  font-size: 4rem;
+  
+}
+
+.tagline{
+  color: #f1f1f1;
+  font-size: 1.5rem;
+  margin-top: -1rem;
+}
+
+.overview{
+  color: #f1f1f1;
+  font-size: 1.2rem;
+}
+
+.cardlink{
+  text-decoration: none;
+  color: #000000;
+}
+
+.overviewtitle{
+  font-size: 2rem;
+  color: #f1f1f1;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+.genres{
+  display: inline;
+  color: aliceblue;
+  font-size: 1.5rem;
+  padding-right: 0.5rem;
+}
+
+.genrestitle{
+  font-size: 2rem;
+  color: #f1f1f1;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+.date{
+  color: rgb(226, 220, 220);
+  display: inline;
+  font-size: 1.5rem;
+}
+
+.cast{
+  width: 100%;
+  height: 350px;
+  /* background: #444; */
+  display: flex;
+  overflow: auto;
+  margin-bottom: 2rem;
+}

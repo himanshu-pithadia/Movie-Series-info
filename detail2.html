@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./detail2.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <title>Details</title>
+</head>
+<script type="text/x-handlebars-template" id="detail_content">
+    <div class="img-container">
+        {{#if backdrop_path}}
+        <img src="https://image.tmdb.org/t/p/original{{backdrop_path}}" alt="">
+        {{else}}
+        <img src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="">
+        {{/if}}
+        <img class="poster" src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="">
+        <div class="movie-detail">
+            <h1 class="title">{{title}}{{original_name}}<p class="date">({{release_date}}{{first_air_date}})</p></h1>
+            <p class="tagline">{{tagline}}</p>
+            <p class="genrestitle">Genres :</p>
+            {{#each genres}}
+            <p class="genres">{{name}}</p>
+            {{/each}}
+            <p class="overviewtitle">Overview :</p>
+            <p class="overview">{{overview}}</p>
+        </div>
+    </div>
+</script>
+<!-- for cast -->
+<script type="text/x-handlebars-template" id="cast_template">
+    {{#each cast}}
+    {{#if profile_path}}
+    <div class="card">
+        <img src="https://image.tmdb.org/t/p/original{{profile_path}}" alt="">
+        <div class="popname">
+            <h2>{{title}}{{name}}</h2>
+            <h3>{{character}}</h3>
+        </div>
+    </div>
+    {{/if}}
+    {{#if poster_path}}
+    <div class="card">
+        <img src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="">
+        <div class="popname">
+            <h2>{{title}}{{name}}</h2>
+            <h3>{{release_date}} {{first_air_date}}</h3>
+        </div>
+    </div>
+    {{/if}}
+
+
+    {{/each}}
+</script>
+<!-- for crew -->
+<script type="text/x-handlebars-template" id="crew_template">
+    {{#each crew}}
+    {{#if profile_path}}
+    <div class="card">
+        <img src="https://image.tmdb.org/t/p/original{{profile_path}}" alt="">
+        <div class="popname">
+            <h2>{{title}}{{name}}</h2>
+            <h3>{{job}}</h3>
+        </div>
+    </div>
+    {{/if}}
+    {{#if poster_path}}
+    <div class="card">
+        <img src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="">
+        <div class="popname">
+            <h2>{{title}}{{name}}</h2>
+            <h3>{{release_date}} {{first_air_date}}</h3>
+        </div>
+    </div>
+    {{/if}}
+
+
+    {{/each}}
+</script>
+<body>
+    <header class="header container">
+        <div>
+            <nav class="navbar">
+                <a href="./index.html"><h1 class="logo">M&TW</h1></a>
+                <ul class="nav-items">
+                    <a href="./movies.html" id="navmovie"><li class="nav-item">Movies</li></a>
+                    <a href="./tvshow.html"><li class="nav-item">TV Shows</li></a>
+                </ul>
+                <div class="search">
+                    <form class="example" action="./search.html">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </divc>
+            </nav>
+        </div>
+        <div class="header-content" id="detail">
+            <!-- <div class="img-container">
+                <img src="./img/wp1890590-peaky-blinders-wallpapers.jpg" alt="">
+                <img class="poster" src="./img/wp1890590-peaky-blinders-wallpapers.jpg" alt="">
+                <div class="movie-detail">
+                    <h1 class="title">Peaky Blinders</h1>
+                    <p class="tagline">TAg line</p>
+                    <p class="overview">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt soluta magni, veniam blanditiis quam hic vel exercitationem asperiores at molestiae.</p>
+                </div>
+            </div> -->
+            
+        </div>
+    </header>
+    <main class="container">
+        <h1 class="heading">Top Billed Cast</h1>
+        <div class="cast">
+            <div class="popular-container" id="cast-content">
+                
+            </div>
+        </div>
+
+        <h1 class="heading">Top Billed Crew</h1>
+        <div class="cast">
+            <div class="popular-container" id="crew-content">
+                
+            </div>
+        </div>
+
+    </main>
+    
+</body>
+</html>
