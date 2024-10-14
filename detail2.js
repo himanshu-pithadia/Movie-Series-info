@@ -1,5 +1,5 @@
 const base_url = "https://api.themoviedb.org/3/";
-const api_key = "6d3fc2892f4427be0ec0d54983ffaa75";
+const api_key = "";
 const id = window.location.href.split('?id=')[1];
 const details = base_url+'tv/'+id+'?api_key='+api_key+'&language=en-US';
 const cast = base_url+'tv/'+id+'/credits?api_key='+api_key+'&language=en-US';
