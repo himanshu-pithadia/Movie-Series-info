@@ -1,5 +1,5 @@
 const base_url = "https://api.themoviedb.org/3/";
-const api_key = "6d3fc2892f4427be0ec0d54983ffaa75";
+const api_key = "";
 var page = 2;
 var maxpage;
 const upcomingMovie = base_url+'discover/movie?api_key='+api_key+'&language=en-US&region=IN&sort_by=release_date.asc&release_date.gte=2022-03-08&page='+page;
