@@ -15,7 +15,7 @@ function showSlides() {
 
 //-----------------------fetch popular movie data----------------------------------
 const base_url = "https://api.themoviedb.org/3/";
-const api_key = "6d3fc2892f4427be0ec0d54983ffaa75";
+const api_key = "";
 const trending = base_url+'trending/all/day?api_key='+api_key;
 const trendingtvshow = base_url+'trending/tv/day?api_key='+api_key;
 const trendingmovie = base_url+'trending/movie/day?api_key='+api_key;
