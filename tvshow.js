@@ -1,5 +1,5 @@
 const base_url = "https://api.themoviedb.org/3/";
-const api_key = "6d3fc2892f4427be0ec0d54983ffaa75";
+const api_key = "";
 var page = 1;
 var maxpage;
 const ontv = base_url+'tv/on_the_air?api_key='+api_key+'&language=en-US&page='+page;
