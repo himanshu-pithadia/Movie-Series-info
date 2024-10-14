@@ -1,5 +1,5 @@
 const base_url = "https://api.themoviedb.org/3/";
-const api_key = "6d3fc2892f4427be0ec0d54983ffaa75";
+const api_key = "";
 const key = window.location.href.split('?search=')[1];
 const searchurl = base_url+'search/multi?api_key='+api_key+'&language=en-US&query='+key+'&page=1&include_adult=false';
 
